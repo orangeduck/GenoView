@@ -1,3 +1,9 @@
+
+
+
+
+https://github.com/user-attachments/assets/70311b6e-9f32-4b9e-8007-4b362102b770
+
 # GenoView
 
 GenoView is a really basic example raylib application that can be used to view skeletal animation data in a way that is clear and highlights any artefacts. It uses a simple Deferred Renderer that supports shadow maps and Screen Space Ambient Occlusion, as well as a procedural grid shader as a texture. This makes common artefacts such as foot sliding and penetrations easy to see on a skinned character even on low-end devices, without the complexity of a full rendering engine.

@@ -20,6 +20,18 @@ ifeq ($(PLATFORM),PLATFORM_DESKTOP)
         LIBS = -lraylib -lopengl32 -lgdi32 -lwinmm
     endif
 
+    ifeq ($(findstring Linux,$(PLATFORM_OS)),Linux)
+        EXT=
+        RAYLIB_DIR = ~/raylib
+        INCLUDE_DIR = -I ./ -I $(RAYLIB_DIR)/raylib/src -I $(RAYLIB_DIR)/raygui/src
+        LIBRARY_DIR = -L $(RAYLIB_DIR)/raylib/src
+        ifeq ($(BUILD_MODE),RELEASE)
+            CFLAGS ?= $(DEFINES) -Wall -Wno-format-truncation -D NDEBUG -O3 $(INCLUDE_DIR) $(LIBRARY_DIR)
+        else
+            CFLAGS ?= $(DEFINES) -Wall -Wno-format-truncation -g $(INCLUDE_DIR) $(LIBRARY_DIR)
+        endif
+        LIBS = -lraylib -lGL -lm -ldl -lpthread
+    endif
 endif
 
 .PHONY: all

@@ -13,7 +13,7 @@ Included are some simple scripts for exporting characters and animation data int
 * [LaFAN resolved](https://github.com/orangeduck/lafan1-resolved)
 * [ZeroEGGS retargeted](https://github.com/orangeduck/zeroeggs-retarget)
 * [Motorica retargeted](https://github.com/orangeduck/motorica-retarget)
-* [100style-retarget](https://github.com/orangeduck/100style-retarget)
+* [100STYLE retargeted](https://github.com/orangeduck/100style-retarget)
 
 However they can likely be adapted to new characters, or the normal raylib-supported file formats can be loaded too.
 

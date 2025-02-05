@@ -616,7 +616,7 @@ int main(int argc, char **argv)
         // Animation
         
         animationFrame = (animationFrame + 1) % testAnimation.frameCount;
-        UpdateModelAnimationBoneMatrices(genoModel, testAnimation, animationFrame);
+        UpdateModelAnimationBones(genoModel, testAnimation, animationFrame);
 
         // Shadow Light Tracks Character
         

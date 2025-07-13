@@ -866,7 +866,7 @@ int main(int argc, char **argv)
   
         GuiGroupBox((Rectangle){ screenWidth - 260, 10, 240, 40 }, "Rendering");
 
-        GuiCheckBox((Rectangle){ screenWidth - 250, 20, 20, 20 }, "Draw Transfoms", &drawBoneTransforms);
+        GuiCheckBox((Rectangle){ screenWidth - 250, 20, 20, 20 }, "Draw Transforms", &drawBoneTransforms);
 
   
         EndDrawing();

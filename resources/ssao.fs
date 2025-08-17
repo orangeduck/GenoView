@@ -75,9 +75,9 @@ void main()
     float shadowDepthBias = 0.00000025;
     float shadowClip = float(
         fragPosLightSpace.x < +1.0 &&
-        fragPosLightSpace.x > -1.0 &&
+        fragPosLightSpace.x >  0.0 &&
         fragPosLightSpace.y < +1.0 &&
-        fragPosLightSpace.y > -1.0);
+        fragPosLightSpace.y >  0.0);
         
     float shadow = 1.0 - shadowClip * float(
         LinearDepth(fragPosLightSpace.z, lightClipNear, lightClipFar) - shadowDepthBias > 
@@ -116,3 +116,4 @@ void main()
     finalColor.b = 0.0f;
     finalColor.a = 1.0f;
 }
+

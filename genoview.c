@@ -691,7 +691,7 @@ int main(int argc, char **argv)
         SetShaderValue(skinnedBasicShader, skinnedBasicShaderCamClipFar, &camClipFar, SHADER_UNIFORM_FLOAT);        
         
         groundModel.materials[0].shader = basicShader;
-        DrawModel(groundModel, groundPosition, 1.0f, WHITE);
+        DrawModel(groundModel, groundPosition, 1.0f, (Color){ 190, 190, 190, 255 });
         
         genoModel.materials[0].shader = skinnedBasicShader;
         DrawModel(genoModel, genoPosition, 1.0f, ORANGE);       
@@ -789,7 +789,7 @@ int main(int argc, char **argv)
         Vector3 sunColor = (Vector3){ 253.0f / 255.0f, 255.0f / 255.0f, 232.0f / 255.0f };
         float sunStrength = 0.25f;
         Vector3 skyColor = (Vector3){ 174.0f / 255.0f, 183.0f / 255.0f, 190.0f / 255.0f };
-        float skyStrength = 0.2f;
+        float skyStrength = 0.15f;
         float groundStrength = 0.1f;
         float ambientStrength = 1.0f;
         float exposure = 0.9f;
@@ -900,3 +900,4 @@ int main(int argc, char **argv)
 
     return 0;
 }
+

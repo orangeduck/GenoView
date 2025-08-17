@@ -93,7 +93,7 @@ void main()
     vec3 ambient = ambientShadow * ambientStrength * lightSkyColor * albedo;
 
     vec3 diffuse = sunShadow * sunStrength * lightSunColor * albedo * sunFactorDiff +
-        groundStrength * lightSkyColor * albedo * groundFactorDiff;
+        groundStrength * lightSkyColor * albedo * groundFactorDiff +
         skyStrength * lightSkyColor * albedo * skyFactorDiff;
 
     float specular = sunShadow * sunStrength * sunFactorSpec + skyStrength * skyFactorSpec;
@@ -106,3 +106,4 @@ void main()
     //finalColor = vec4(ToGamma(vec3(specular, specular, specular)), 1.0f);
     gl_FragDepth = NonlinearDepth(depth, camClipNear, camClipFar);
 }
+

@@ -580,6 +580,8 @@ int main(int argc, char **argv)
     OrbitCamera camera;
     OrbitCameraInit(&camera);
     
+    rlSetClipPlanes(0.01f, 50.0f);
+    
     // Shadows
     
     Vector3 lightDir = Vector3Normalize((Vector3){ 0.35f, -1.0f, -0.35f });

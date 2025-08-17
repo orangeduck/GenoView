@@ -66,13 +66,13 @@ void main()
     
     vec3 seed = Rand(fragTexCoord);
     
-    float shadowNormalBias = 0.005;
+    float shadowNormalBias = 0.01;
     
     vec4 fragPosLightSpace = lightViewProj * vec4(fragPosition + shadowNormalBias * fragNormal, 1);
     fragPosLightSpace.xyz /= fragPosLightSpace.w;
     fragPosLightSpace.xyz = (fragPosLightSpace.xyz + 1.0f) / 2.0f;
     
-    float shadowDepthBias = 0.00000025;
+    float shadowDepthBias = 0.000005;
     float shadowClip = float(
         fragPosLightSpace.x < +1.0 &&
         fragPosLightSpace.x >  0.0 &&

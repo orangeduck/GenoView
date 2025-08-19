@@ -17,6 +17,8 @@ Included are some simple scripts for exporting characters and animation data int
 
 However they can likely be adapted to new characters, or the normal raylib-supported file formats can be loaded too.
 
+For a pure python version of this project check out [GenoViewPython](https://github.com/orangeduck/GenoViewPython/).
+
 # Getting Started
 
 Here are the steps to viewing any of the animation data linked above in this viewer.
@@ -25,3 +27,4 @@ Here are the steps to viewing any of the animation data linked above in this vie
 2. Place any bvh files you want to view in the `resources` folder.
 3. Edit the `bvh_files` variable in the `resources/export_animations.py` script to contain the bvh files you want to view - then run the `export_animations.py` script.
 4. Edit the line in `genoview.c` where `testAnimation` is loaded to load the animation you want to view instead.
+
